@@ -2,11 +2,13 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import youtube from '../../public/youtubelogo.png'
 import { CiSearch } from "react-icons/ci";
-import { FaMicrophone } from "react-icons/fa"
+import { IoMdMic } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { FaVideo } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
+import profile from '../../public/profile.png'
+
 import { IoIosNotificationsOutline } from "react-icons/io";
+import Avatar from "react-avatar";
 
 
 
@@ -42,14 +44,16 @@ const Navbar = () => {
       </div>
 
       {/* External search button */}
-      <button className="p-2 rounded-full bg-[#222] hover:bg-[#333]">
-        <CiSearch size={25} className="text-white" />
-      </button>
-
-      {/* Mic button */}
-      <button className="p-2 rounded-full bg-[#222] hover:bg-[#333]">
-        <FaMicrophone size={22} className="text-white" />
-      </button>
+      <button
+          className="px-4 py-2 border-[1px] border-gray-400 bg-gray-100 rounded-r-full"
+          onClick={() => searchQueryHandler("searchButton")}
+        >
+          <CiSearch size={"24px"} />
+        </button>
+        <IoMdMic
+          size={"42px"}
+          className="ml-3 border border-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-200 duration-200"
+        />
     </div>
  
 
@@ -63,7 +67,7 @@ const Navbar = () => {
       </button>
 
       <button className="p-2 rounded-full hover:text-gray-800">
-       <CgProfile size={25} />
+        <Avatar src={profile} size="32" round={true} />
       </button>
     </div>
       </div>
