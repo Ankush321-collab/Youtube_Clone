@@ -31,15 +31,16 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-[35vh] h-[100vh] border px-3 py-2 space-y-2 rounded-lg">
+  <div className="w-[35vh] h-[100vh] bg-[#232323] border border-gray-700 px-3 py-2 space-y-2 rounded-lg text-white">
       {/* Main */}
       {sidebarMain.map((item) => (
         <div
           key={item.id}
-          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2"
+          className="flex items-center space-x-4 hover:bg-gray-800 cursor-pointer rounded-xl p-2 transition-colors duration-200"
+          onClick={() => alert(item.name + ' clicked!')}
         >
           {item.icon}
-          <span className="text-lg font-medium">{item.name}</span>
+          <span className="text-lg font-medium text-white">{item.name}</span>
         </div>
       ))}
 
@@ -49,7 +50,8 @@ const Sidebar = () => {
       {sidebaritem2.map((item) => (
         <div
           key={item.id}
-          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2"
+          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2 transition-colors duration-200"
+          onClick={() => alert(item.name + ' clicked!')}
         >
           {item.icon}
           <span className="text-lg font-medium">{item.name}</span>
@@ -62,7 +64,8 @@ const Sidebar = () => {
       {sidebaritem3.map((item) => (
         <div
           key={item.id}
-          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2"
+          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2 transition-colors duration-200"
+          onClick={() => alert(item.name + ' clicked!')}
         >
           {item.icon}
           <span className="text-lg font-medium">{item.name}</span>
