@@ -31,12 +31,12 @@ const Sidebar = () => {
   ];
 
   return (
-  <div className="w-[35vh] h-[100vh] bg-[#232323] border border-gray-700 px-3 py-2 space-y-2 rounded-lg text-white">
+  <div className="sticky top-0 w-[35vh] h-[100vh] bg-[#232323] border border-white/10 px-3 py-2 space-y-2 rounded-lg text-white backdrop-blur-lg shadow-2xl">
       {/* Main */}
       {sidebarMain.map((item) => (
         <div
           key={item.id}
-          className="flex items-center space-x-4 hover:bg-gray-800 cursor-pointer rounded-xl p-2 transition-colors duration-200"
+          className="flex items-center space-x-4 hover:bg-blue-900/40 hover:scale-[1.03] cursor-pointer rounded-xl p-2 transition-all duration-200"
           onClick={() => alert(item.name + ' clicked!')}
         >
           {item.icon}
@@ -50,7 +50,7 @@ const Sidebar = () => {
       {sidebaritem2.map((item) => (
         <div
           key={item.id}
-          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2 transition-colors duration-200"
+          className="flex items-center space-x-4 hover:bg-blue-900/40 hover:scale-[1.03] cursor-pointer rounded-xl p-2 transition-all duration-200"
           onClick={() => alert(item.name + ' clicked!')}
         >
           {item.icon}
@@ -64,7 +64,7 @@ const Sidebar = () => {
       {sidebaritem3.map((item) => (
         <div
           key={item.id}
-          className="flex items-center space-x-4 hover:bg-gray-300 cursor-pointer rounded-xl p-2 transition-colors duration-200"
+          className="flex items-center space-x-4 hover:bg-blue-900/40 hover:scale-[1.03] cursor-pointer rounded-xl p-2 transition-all duration-200"
           onClick={() => alert(item.name + ' clicked!')}
         >
           {item.icon}
