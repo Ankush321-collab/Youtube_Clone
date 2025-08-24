@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import YouTubeVideos from '../google_youtube.jsx';
 
-const YOUTUBE_API_KEY = "AIzaSyCIMACh4aCADeCeUFCabuqdqW6M11ZcZ3Y";
+const YOUTUBE_API_KEY = "";
 
 function App() {
   const [videos, setVideos] = useState([]);
